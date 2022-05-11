@@ -1,9 +1,5 @@
 class CreateTasks < ActiveRecord::Migration[7.0]
   def change
-    create_table :tasks do |t|
-      t.string :title
-
-      t.timestamps
-    end
+    add_column :tasks, :deadline, :timestamp
   end
 end
